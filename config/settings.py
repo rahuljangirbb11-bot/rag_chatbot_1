@@ -27,7 +27,29 @@ load_dotenv(
 # OPENAI CONFIGURATION
 # =====================================
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# =====================================
+# OPENAI CONFIGURATION
+# =====================================
+
+def get_openai_api_key():
+
+    # First, check local environment variables
+    api_key = os.getenv("OPENAI_API_KEY")
+
+    if api_key:
+        return api_key
+
+    # If not found, check Streamlit Cloud secrets
+    try:
+        import streamlit as st
+
+        return st.secrets["OPENAI_API_KEY"]
+
+    except Exception:
+        return None
+
+
+OPENAI_API_KEY = get_openai_api_key()
 
 
 # =====================================
