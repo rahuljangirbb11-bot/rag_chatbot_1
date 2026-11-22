@@ -1,0 +1,24 @@
+# Environment variables
+.env
+.streamlit/secrets.toml
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Vector database
+chroma_db/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# IDE
+.vscode/

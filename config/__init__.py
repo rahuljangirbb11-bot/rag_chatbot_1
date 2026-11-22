@@ -1,0 +1,11 @@
+from .settings import (
+    BASE_DIR,
+    OPENAI_API_KEY,
+    LLM_MODEL,
+    EMBEDDING_MODEL,
+    CHROMA_BASE_DIR,
+    COLLECTION_NAME,
+    CHUNK_SIZE,
+    CHUNK_OVERLAP,
+    RETRIEVER_K
+)
